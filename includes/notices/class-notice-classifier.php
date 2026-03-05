@@ -1,0 +1,164 @@
+<?php
+/**
+ * Notice Classifier Class
+ *
+ * Classifies admin notices by type.
+ *
+ * @package WP_Notice_Manager
+ * @subpackage Notices
+ */
+
+namespace WP_Notice_Manager\Notices;
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Notice Classifier Class
+ *
+ * Detects notice types from HTML content.
+ *
+ * @since 1.0.0
+ */
+class Notice_Classifier {
+
+	/**
+	 * Classify notice type from HTML content.
+	 *
+	 * @since 1.0.0
+	 * @param string $html Notice HTML content.
+	 * @return string Notice type (success, error, warning, info, other).
+	 */
+	public static function classify( $html ) {
+		// Check for WordPress notice classes.
+		if ( self::contains_class( $html, 'notice-success' ) || self::contains_class( $html, 'updated' ) ) {
+			return 'success';
+		}
+
+		if ( self::contains_class( $html, 'notice-error' ) || self::contains_class( $html, 'error' ) ) {
+			return 'error';
+		}
+
+		if ( self::contains_class( $html, 'notice-warning' ) ) {
+			return 'warning';
+		}
+
+		if ( self::contains_class( $html, 'notice-info' ) ) {
+			return 'info';
+		}
+
+		// Check if it's a WordPress system notice.
+		if ( self::is_system_notice( $html ) ) {
+			return 'system';
+		}
+
+		// Default to 'other' for non-standard notices.
+		return 'other';
+	}
+
+	/**
+	 * Check if HTML contains a specific CSS class in a class attribute.
+	 *
+	 * Uses a regex to match only within class="..." attributes,
+	 * preventing false positives from content text.
+	 *
+	 * @since 1.0.0
+	 * @param string $html  HTML content.
+	 * @param string $class Class name to check.
+	 * @return bool
+	 */
+	private static function contains_class( $html, $class ) {
+		// Match class name as a whole word within class attributes.
+		$pattern = '/class\s*=\s*["\'][^"\']*\b' . preg_quote( $class, '/' ) . '\b[^"\']*["\']/i';
+		return (bool) preg_match( $pattern, $html );
+	}
+
+	/**
+	 * Check if notice is a WordPress system notice.
+	 *
+	 * @since 1.0.0
+	 * @param string $html HTML content.
+	 * @return bool
+	 */
+	private static function is_system_notice( $html ) {
+		// WordPress system notices often contain specific patterns.
+		$system_patterns = array(
+			'WordPress',
+			'wp-core-ui',
+			'update-nag',
+			'update-message',
+		);
+
+		foreach ( $system_patterns as $pattern ) {
+			if ( stripos( $html, $pattern ) !== false ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Extract notice content (text only).
+	 *
+	 * @since 1.0.0
+	 * @param string $html HTML content.
+	 * @return string Plain text content.
+	 */
+	public static function extract_content( $html ) {
+		// Remove script and style tags.
+		$html = preg_replace( '/<script\b[^>]*>(.*?)<\/script>/is', '', $html );
+		$html = preg_replace( '/<style\b[^>]*>(.*?)<\/style>/is', '', $html );
+
+		// Strip HTML tags.
+		$text = wp_strip_all_tags( $html );
+
+		// Clean up whitespace.
+		$text = trim( preg_replace( '/\s+/', ' ', $text ) );
+
+		return $text;
+	}
+
+	/**
+	 * Get notice icon based on type.
+	 *
+	 * @since 1.0.0
+	 * @param string $type Notice type.
+	 * @return string Dashicon class.
+	 */
+	public static function get_icon( $type ) {
+		$icons = array(
+			'success' => 'dashicons-yes-alt',
+			'error'   => 'dashicons-dismiss',
+			'warning' => 'dashicons-warning',
+			'info'    => 'dashicons-info',
+			'system'  => 'dashicons-wordpress',
+			'other'   => 'dashicons-bell',
+		);
+
+		return isset( $icons[ $type ] ) ? $icons[ $type ] : $icons['other'];
+	}
+
+	/**
+	 * Get notice color based on type.
+	 *
+	 * @since 1.0.0
+	 * @param string $type Notice type.
+	 * @return string Color hex code.
+	 */
+	public static function get_color( $type ) {
+		$colors = array(
+			'success' => '#46b450',
+			'error'   => '#dc3232',
+			'warning' => '#ffb900',
+			'info'    => '#00a0d2',
+			'system'  => '#0073aa',
+			'other'   => '#72777c',
+		);
+
+		return isset( $colors[ $type ] ) ? $colors[ $type ] : $colors['other'];
+	}
+}
+

@@ -1,0 +1,165 @@
+# Copyright (C) 2026 WP Notice Manager
+# This file is distributed under the same license as the WP Notice Manager package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Notice Manager 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-notice-manager\n"
+"POT-Creation-Date: 2026-03-05 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: wp-notice-manager.php
+msgid "WP Notice Manager"
+msgstr ""
+
+msgid "Manage and organize WordPress admin notices."
+msgstr ""
+
+msgid "Notices"
+msgstr ""
+
+msgid "View Notices"
+msgstr ""
+
+msgid "Mark All as Read"
+msgstr ""
+
+msgid "Clear All"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "An error occurred"
+msgstr ""
+
+msgid "No notices to display"
+msgstr ""
+
+msgid "Success"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "WP Notice Manager Settings"
+msgstr ""
+
+msgid "Notice Manager"
+msgstr ""
+
+msgid "Notice Type Settings"
+msgstr ""
+
+msgid "Popup Settings"
+msgstr ""
+
+msgid "User Visibility Settings"
+msgstr ""
+
+msgid "Advanced Settings"
+msgstr ""
+
+msgid "Success Notices"
+msgstr ""
+
+msgid "Error Notices"
+msgstr ""
+
+msgid "Warning Notices"
+msgstr ""
+
+msgid "Info Notices"
+msgstr ""
+
+msgid "Non-standard Notices"
+msgstr ""
+
+msgid "WordPress System Notices"
+msgstr ""
+
+msgid "Show in popup & hide from dashboard"
+msgstr ""
+
+msgid "Hide completely"
+msgstr ""
+
+msgid "Do nothing (leave in dashboard)"
+msgstr ""
+
+msgid "Popup Style"
+msgstr ""
+
+msgid "Slide from Right"
+msgstr ""
+
+msgid "Modal Popup (Centered)"
+msgstr ""
+
+msgid "Slide Background Panel"
+msgstr ""
+
+msgid "Visibility Mode"
+msgstr ""
+
+msgid "Show to all users"
+msgstr ""
+
+msgid "Hide from all users"
+msgstr ""
+
+msgid "Hide from selected users only"
+msgstr ""
+
+msgid "Show to selected users only"
+msgstr ""
+
+msgid "Select Users"
+msgstr ""
+
+msgid "Hold Ctrl/Cmd to select multiple users."
+msgstr ""
+
+msgid "Auto-expire Notices After"
+msgstr ""
+
+msgid "days"
+msgstr ""
+
+msgid "Notices older than this will be automatically deleted."
+msgstr ""
+
+msgid "Unauthorized access"
+msgstr ""
+
+msgid "Unauthorized"
+msgstr ""
+
+msgid "Invalid notice ID"
+msgstr ""
+
+msgid "Notice marked as read"
+msgstr ""
+
+msgid "Failed to mark notice as read"
+msgstr ""
+
+msgid "Notice dismissed"
+msgstr ""
+
+msgid "Failed to dismiss notice"
+msgstr ""
+
