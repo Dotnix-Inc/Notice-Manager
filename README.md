@@ -209,7 +209,7 @@ This plugin is licensed under the GPLv2 or later.
 
 ## 👨‍💻 Author
 
-Created by **Your Name**  
+Created by **Dotnix Tech**  
 Website: [https://example.com](https://example.com)  
 GitHub: [@yourname](https://github.com/yourname)
 
