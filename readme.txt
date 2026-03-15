@@ -1,6 +1,6 @@
-=== WP Notice Manager ===
-Contributors: yourname
-Tags: admin, notices, notifications, dashboard, admin-bar
+=== Notice Manager ===
+Contributors: abduremon
+Tags: Admin notices, hide admin notices, hide admin notifications, dashboard notices, notices
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 7.2
@@ -8,99 +8,57 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Manage and organize WordPress admin notices by moving them from the cluttered dashboard into a centralized notice management system.
+Control your WordPress dashboard with Notice Manager - hide, manage, and organize admin alerts for a clean, distraction-free site.
 
 == Description ==
 
-**WP Notice Manager** solves the problem of admin notice clutter in WordPress dashboards.
+= Take Control of Your Dashboard with Disable Admin Notices =
+Is your WordPress dashboard cluttered with constant plugin alerts, theme warnings, and promotional pop-ups? **Notice Manager** is the ultimate solution for users who want to reclaim their workspace.
 
-= The Problem =
+WordPress admin notices can be helpful, but they often become overwhelming, taking up valuable screen real estate and disrupting your workflow. Our plugin gives you full control over your admin environment, allowing you to hide, remove, or manage notifications with just a few clicks. Whether you want to silence all alerts or simply organize them into a cleaner view, we’ve got you covered.
 
-WordPress dashboards are often flooded with admin notices from:
 
-* WordPress core updates
-* Plugin notifications
-* Theme alerts
-* System warnings
 
-This causes:
+= Why Choose Disable Admin Notices? =
+* **Declutter Your Workspace:** Remove distracting "nag" screens and promotional banners.
+* **Improve Productivity:** Focus on your content instead of closing endless alert boxes.
+* **Customizable Control:** Don’t just block everything - choose exactly what you see and where you see it.
+* **Lightweight & Fast:** Optimized code ensures your dashboard stays snappy while remaining distraction-free.
 
-* Important notices being ignored
-* Dashboard clutter
-* Poor admin experience
-* Missed critical updates
 
-= The Solution =
+= Key Features for a Cleaner WordPress Admin =
+* **Global or Selective Hiding:** Disable all admin notices globally or pick and choose specific notifications to hide.
+* **Compact Notification Bar:** Instead of giant boxes, move all alerts into a single, clean, compact line at the top of your screen.
+* **Admin Bar Integration:** Keep your workspace 100% clear by moving all notifications into a dedicated menu in the WordPress admin bar.
+* **Disable Update Alerts:** Gain total control over your versioning by disabling WordPress core update notifications, as well as plugin and theme update alerts.
+* **Block Promotional Redirects:** Stop plugins from automatically redirecting you to "Welcome" or "Pro" sales pages after an update.
+* **Hidden Notice Archive:** Never miss a critical message. Access all hidden notifications at any time directly from the plugin dashboard.
+* **One-Click Restore:** Made a mistake? Reset your settings or restore hidden notices instantly.
 
-WP Notice Manager captures all admin notices and displays them in a clean, centralized popup interface accessible from the WordPress admin toolbar.
 
-= Features =
+= Experience a Distraction-Free WordPress Workflow =
+Whether you are managing multiple sites or a blogger tired of constant upselling, **Notice Manager** helps you maintain a professional, organized, and distraction-free environment.
 
-**Notice Capture**
 
-* Captures all WordPress admin notices
-* Classifies notices by type (success, error, warning, info)
-* Stores notices for later viewing
-* Removes clutter from dashboard
+**Stop the clutter and start focusing on what matters: Your Website.**
 
-**Admin Toolbar Integration**
 
-* Shows notice count in admin bar
-* One-click access to all notices
-* Real-time counter updates
-* Non-intrusive design
+== Privacy Policy ==
 
-**Popup Interface**
+**Notice Manager does not:**
 
-Choose from 3 popup styles:
+* Collect any user data
+* Send data to external servers
+* Use cookies or tracking
+* Store personal information
 
-1. Slide from Right - Smooth slide-in panel
-2. Modal Popup - Centered overlay
-3. Slide Background Panel - Full-height sidebar
+**All notices are stored locally in your WordPress database and are automatically deleted after the configured expiration period.**
 
-**Granular Control**
 
-Configure behavior for each notice type:
 
-* Success notices - Show in popup, hide completely, or do nothing
-* Error notices - Show in popup, hide completely, or do nothing
-* Warning notices - Show in popup, hide completely, or do nothing
-* Info notices - Show in popup, hide completely, or do nothing
-* Non-standard notices - Show in popup, hide completely, or do nothing
-* WordPress system notices - Show in popup or do nothing
+= Built with Trust, Backed by Us 🚀 =
+**Notice Manager** is developed by **Dotnix**, a trusted WordPress marketplace known for building high-performance and reliable tools that simplify website management for thousands of users worldwide. 
 
-**User Visibility Control**
-
-Control who sees notices:
-
-* Hide from all users
-* Hide from selected users only
-* Hide from all except selected users
-
-**Notice Management**
-
-* Mark notices as read/unread
-* Auto-expire old notices (30 days default)
-* Dismiss individual notices
-* Clear all notices
-
-= Use Cases =
-
-* **WordPress Agencies** - Keep client dashboards clean
-* **Freelancers** - Manage multiple sites efficiently
-* **Enterprise Teams** - Control notice visibility by role
-* **Bloggers** - Reduce dashboard clutter
-* **WooCommerce Stores** - Organize store notifications
-
-= Technical Features =
-
-* Clean, object-oriented architecture
-* PSR-4 autoloading
-* SOLID principles
-* WordPress coding standards
-* Secure by design
-* Performance optimized
-* Translation ready
 
 == Installation ==
 
@@ -108,7 +66,7 @@ Control who sees notices:
 
 1. Log in to your WordPress admin panel
 2. Navigate to **Plugins → Add New**
-3. Search for "WP Notice Manager"
+3. Search for "Notice Manager"
 4. Click **Install Now**
 5. Activate the plugin
 
@@ -119,22 +77,15 @@ Control who sees notices:
 3. Navigate to **Plugins → Add New → Upload Plugin**
 4. Choose the ZIP file and click **Install Now**
 5. Activate the plugin
-
-= FTP Installation =
-
-1. Download and extract the plugin ZIP file
-2. Upload the `wp-notice-manager` folder to `/wp-content/plugins/`
-3. Activate the plugin through the WordPress admin panel
-
 == Frequently Asked Questions ==
 
 = Does this plugin hide all admin notices? =
 
-No, you have full control. You can configure each notice type separately to either show in the popup, hide completely, or leave in the dashboard.
+No, you have full control. You can configure each notice type separately to either show in the pop-up, hide completely, or leave it in the dashboard.
 
 = Will I miss important notices? =
 
-No! Notices are captured and stored in the popup. You'll see a counter in the admin toolbar showing how many unread notices you have.
+No! Notices are captured and stored in the pop-up. You'll see a counter in the admin toolbar showing how many unread notices you have.
 
 = Can I control who sees the notice manager? =
 
@@ -142,13 +93,13 @@ Yes! You can configure visibility settings to show/hide the notice manager for s
 
 = Does this work with multisite? =
 
-Yes, WP Notice Manager is fully compatible with WordPress multisite installations.
+Yes, Notice Manager is fully compatible with WordPress multisite installations.
 
 = Will this slow down my site? =
 
 No! The plugin uses lazy loading, transient caching, and minimal database queries. It has zero impact on frontend performance.
 
-= Can I customize the popup appearance? =
+= Can I customize the pop-up appearance? =
 
 Yes! You can choose from 3 popup styles: Slide from Right, Modal Popup, or Slide Background Panel.
 
@@ -156,9 +107,13 @@ Yes! You can choose from 3 popup styles: Slide from Right, Modal Popup, or Slide
 
 By default, notices are automatically deleted after 30 days. You can customize this in the settings.
 
-= Is this plugin translation ready? =
+= Is this plugin translation-ready? =
 
-Yes! WP Notice Manager is fully translation ready with a .pot file included.
+Yes! Notice Manager is fully translation-ready with a .pot file included.
+
+
+
+
 
 == Screenshots ==
 
@@ -167,6 +122,7 @@ Yes! WP Notice Manager is fully translation ready with a .pot file included.
 3. Settings page - Notice type configuration
 4. Settings page - User visibility controls
 5. Clean dashboard with notices hidden
+
 
 == Changelog ==
 
@@ -178,33 +134,10 @@ Yes! WP Notice Manager is fully translation ready with a .pot file included.
 * Settings page
 * User visibility controls
 * Auto-expire functionality
-* Translation ready
+
 
 == Upgrade Notice ==
 
 = 1.0.0 =
-Initial release of WP Notice Manager.
-
-== Privacy Policy ==
-
-WP Notice Manager does not:
-
-* Collect any user data
-* Send data to external servers
-* Use cookies or tracking
-* Store personal information
-
-All notices are stored locally in your WordPress database and are automatically deleted after the configured expiration period.
-
-== Support ==
-
-For support, please visit:
-
-* [Plugin Documentation](https://example.com/docs)
-* [Support Forum](https://wordpress.org/support/plugin/wp-notice-manager)
-* [GitHub Repository](https://github.com/yourname/wp-notice-manager)
-
-== Credits ==
-
-Developed by [Your Name](https://example.com)
+* [Major Update] Must Update.
 
